@@ -17,8 +17,11 @@ namespace AutoRagenaline
 		[DefaultValue("n")]
 		public string Secret { get; set; }
 
+		[DefaultValue("")]
+		public string Owner { get; set; }
+
 		public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref NetworkText message) {
-			if (!AutoRagenaline.IsPlayerLocalServerOwner(Main.player[whoAmI])) {
+			if (!AutoRagenaline.IsPlayerLocalServerOwner(Main.player[whoAmI]) || Main.player[whoAmI].ToString() != Owner) {
 				message = this.GetLocalization("YouAreNotServerOwnerCantChangeConfig").ToNetworkText();
 				return false;
 			}

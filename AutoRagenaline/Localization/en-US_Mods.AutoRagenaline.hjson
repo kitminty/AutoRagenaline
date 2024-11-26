@@ -37,5 +37,10 @@ Configs: {
 			Label: Enable Or Disable Secret
 			Tooltip: ""
 		}
+
+		Owner: {
+			Label: Owner
+			Tooltip: ""
+		}
 	}
 }

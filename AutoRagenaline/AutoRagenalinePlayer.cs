@@ -17,7 +17,7 @@ namespace AutoRagenaline
         public SoundStyle AdrenalineActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/AdrenalineActivate");
         public SoundStyle NanomachinesActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/NanomachinesActivate");
         
-        public int startrage = 1;
+        public int startrage = 0;
         public int startadrenaline = 1;
         public int startsecretmode = 0;
         public int forcehiddensecretmode = 0;
