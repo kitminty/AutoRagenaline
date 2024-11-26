@@ -14,14 +14,14 @@ namespace AutoRagenaline
         [DefaultValue(true)]
         public bool EnableOrDisableSecret { get; set; }
         
-		[DefaultValue("n")]
+		[DefaultValue("")]
 		public string Secret { get; set; }
 
 		[DefaultValue("")]
 		public string Owner { get; set; }
 
 		public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref NetworkText message) {
-			if (!AutoRagenaline.IsPlayerLocalServerOwner(Main.player[whoAmI]) || Main.player[whoAmI].ToString() != Owner) {
+			if (!AutoRagenaline.IsPlayerLocalServerOwner(Main.player[whoAmI])) {
 				message = this.GetLocalization("YouAreNotServerOwnerCantChangeConfig").ToNetworkText();
 				return false;
 			}
