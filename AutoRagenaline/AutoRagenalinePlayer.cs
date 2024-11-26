@@ -24,9 +24,8 @@ namespace AutoRagenaline
 
         public async override void OnEnterWorld() {
             while (Main.menuMode != 0) {
-                var autoRagenalineServerConfig = new AutoRagenalineServerConfig();
                 var CalamityPlayer = Player.GetModPlayer<CalamityPlayer>();
-                if (AutoRagenalineServerConfig.Instance.Secret == Player.name && AutoRagenalineServerConfig.Instance.EnableOrDisableSecret == true) {
+                if (AutoRagenalineServerConfig.Instance.Secret == Player.name && AutoRagenalineServerConfig.Instance.EnableOrDisableSecret) {
                     forcehiddensecretmode = 1;
                     startsecretmode = 1;
                 } else {
@@ -105,7 +104,6 @@ namespace AutoRagenaline
                 await Task.Delay(1000);
             }
         }
-        //done
 
         public async override void ProcessTriggers(TriggersSet triggersSet) {
             if (AutoRagenaline.ragee.JustPressed) {
@@ -140,6 +138,11 @@ namespace AutoRagenaline
                 } else {
                     Main.NewText("Disabled");
                 }
+            }
+            if (AutoRagenaline.disableall.JustPressed) {
+                startrage = 0;
+                startadrenaline = 0;
+                Main.NewText("Disabled All");
             }
         }
     }

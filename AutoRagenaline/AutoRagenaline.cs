@@ -8,10 +8,12 @@ namespace AutoRagenaline
 		internal static ModKeybind ragee;
 		internal static ModKeybind adrenalinee;
 		internal static ModKeybind secretmode;
+		internal static ModKeybind disableall;
 		public override void Load() { 
 			ragee = KeybindLoader.RegisterKeybind(this, "Auto Rage", "H");
 			adrenalinee = KeybindLoader.RegisterKeybind(this, "Auto Adrenaline", "G");
 			secretmode = KeybindLoader.RegisterKeybind(this, "Secret Mode", "J");
+			disableall = KeybindLoader.RegisterKeybind(this, "Disable All", "K");
 		}
 		public static bool IsPlayerLocalServerOwner(Player player) {
 			if (AutoRagenalineServerConfig.Instance.Owner == player.name) {
