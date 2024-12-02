@@ -1,0 +1,4 @@
+displayName = Auto Ragenaline
+author = Kittyelectro
+version = 0.9.4
+modReferences = CalamityMod
