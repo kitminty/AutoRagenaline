@@ -1,4 +1,7 @@
-displayName = Auto Ragenaline
-author = Kittyelectro
-version = 0.9.4
 modReferences = CalamityMod
+sortAfter = CalamityMod
+author = kitminty
+version = 0.9.5
+displayName = Auto Ragenaline
+hideCode = false
+hideResources = false
